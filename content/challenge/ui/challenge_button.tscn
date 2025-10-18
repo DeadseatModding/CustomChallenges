@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://cea13isyhp0qv"]
+
+[ext_resource type="Script" uid="uid://d1gk5kv3mhcp8" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/challenge/ui/challenge_button.gd" id="1_q60jx"]
+[ext_resource type="Texture2D" uid="uid://b4ifteyf715ad" path="res://art/ui/challenge_mode/challenge_icons/Question_Mark.png" id="2_54wa5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1ddt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cf0pw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w1ddt"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf0pw"]
+atlas = ExtResource("2_54wa5")
+region = Rect2(0, 0, 32, 32)
+
+[node name="ChallengeButton" type="CenterContainer"]
+custom_minimum_size = Vector2(72, 72)
+offset_right = 72.0
+offset_bottom = 72.0
+mouse_filter = 2
+script = ExtResource("1_q60jx")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w1ddt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cf0pw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w1ddt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_w1ddt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+mouse_filter = 2
+texture = SubResource("AtlasTexture_cf0pw")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_pressed"]

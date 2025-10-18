@@ -1,0 +1,16 @@
+{
+	"name": "CustomChallenges",
+	"namespace": "ZackeryRSmith",
+	"version_number": "1.0.0",
+	"description": "A library for defining and managing custom challenge settings and presets",
+	"website_url": "https://github.com/DeadseatModding/CustomChallenges",
+	"dependencies": [],
+	"extra": {
+		"godot": {
+			"authors": ["ZackeryRSmith"],
+			"description_rich": "A library for defining and managing custom challenge settings and presets\n[color=yellow]disables challenge mode achievements![/color]",
+			"compatible_mod_loader_version": ["7.0.1"],
+			"compatible_game_version": ["0.0.0"],
+		}
+	}
+}

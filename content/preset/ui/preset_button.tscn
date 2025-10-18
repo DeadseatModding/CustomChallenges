@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://dhce53e1qo1fp"]
+
+[ext_resource type="Script" uid="uid://bo5ja1lalx053" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/preset/ui/preset_button.gd" id="1_6oh26"]
+[ext_resource type="Texture2D" uid="uid://b4848h4trkg0m" path="res://art/ui/challenge_mode/preset_icons/preset_icon_default.png" id="2_ye2gg"]
+[ext_resource type="FontFile" uid="uid://dndjk82roym1y" path="res://fonts/Journal Font.ttf" id="3_4xoms"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5xu4k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt0jw"]
+atlas = ExtResource("2_ye2gg")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3a4rq"]
+texture = SubResource("AtlasTexture_vt0jw")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6q40r"]
+atlas = ExtResource("2_ye2gg")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5xu4k"]
+texture = SubResource("AtlasTexture_6q40r")
+
+[node name="PresetButton" type="VBoxContainer"]
+custom_minimum_size = Vector2(60, 55)
+offset_right = 60.0
+offset_bottom = 55.0
+script = ExtResource("1_6oh26")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5xu4k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3a4rq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_5xu4k")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5xu4k")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4xoms")
+theme_override_font_sizes/font_size = 8
+text = "WELCOME BACK"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_pressed"]

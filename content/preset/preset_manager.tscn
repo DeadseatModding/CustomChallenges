@@ -1,0 +1,103 @@
+[gd_scene load_steps=17 format=3 uid="uid://du2amxccbc31l"]
+
+[ext_resource type="Script" uid="uid://didk8hrmt2pgf" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/preset/preset_manager.gd" id="1_lt0u1"]
+[ext_resource type="Script" uid="uid://b2y858y5mj64c" path="res://ui/challenge_mode/ui_challenge_button_sfx.gd" id="2_rhg1y"]
+[ext_resource type="PackedScene" uid="uid://dhce53e1qo1fp" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/preset/ui/preset_button.tscn" id="4_dvbuo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eb2b0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ih5ii"]
+load_path = "res://.godot/imported/arrow_challenge_spritesheet.png-5fb908b0583c22d25268b929b1bf87a2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0royo"]
+atlas = SubResource("CompressedTexture2D_ih5ii")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf3sm"]
+texture = SubResource("AtlasTexture_0royo")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_has44"]
+load_path = "res://.godot/imported/arrow_challenge_spritesheet.png-5fb908b0583c22d25268b929b1bf87a2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j7nv"]
+atlas = SubResource("CompressedTexture2D_has44")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xheon"]
+texture = SubResource("AtlasTexture_4j7nv")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eb2b0"]
+load_path = "res://.godot/imported/arrow_challenge_spritesheet.png-5fb908b0583c22d25268b929b1bf87a2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ens1w"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pfhbc"]
+texture = SubResource("AtlasTexture_ens1w")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1ifi"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xahvw"]
+texture = SubResource("AtlasTexture_q1ifi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xgbw3"]
+texture = SubResource("AtlasTexture_q1ifi")
+
+[node name="PresetManager" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_lt0u1")
+
+[node name="DecrementButton" type="Button" parent="."]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eb2b0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qf3sm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xheon")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xheon")
+script = ExtResource("2_rhg1y")
+
+[node name="Presets" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="PresetButton1" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton2" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton3" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton4" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton5" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton6" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton7" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="PresetButton8" parent="Presets" instance=ExtResource("4_dvbuo")]
+layout_mode = 2
+
+[node name="IncrementButton" type="Button" parent="."]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eb2b0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pfhbc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xahvw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xgbw3")
+script = ExtResource("2_rhg1y")

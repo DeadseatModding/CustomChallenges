@@ -1,0 +1,123 @@
+[gd_scene load_steps=16 format=3 uid="uid://tk6856vy6klx"]
+
+[ext_resource type="Script" uid="uid://b0i2nd28navhe" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/challenge/challenge_manager.gd" id="1_qdd51"]
+[ext_resource type="Script" uid="uid://b2y858y5mj64c" path="res://ui/challenge_mode/ui_challenge_button_sfx.gd" id="2_lfw5k"]
+[ext_resource type="FontFile" uid="uid://dndjk82roym1y" path="res://fonts/Journal Font.ttf" id="3_igxdy"]
+[ext_resource type="PackedScene" uid="uid://cea13isyhp0qv" path="res://mods-unpacked/ZackeryRSmith-CustomChallenges/content/challenge/ui/challenge_button.tscn" id="4_lfw5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_le7im"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eb2b0"]
+load_path = "res://.godot/imported/arrow_challenge_spritesheet.png-5fb908b0583c22d25268b929b1bf87a2.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tncan"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ph5x"]
+texture = SubResource("AtlasTexture_tncan")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhew0"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oqhyw"]
+texture = SubResource("AtlasTexture_nhew0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpjs6"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ygxvd"]
+texture = SubResource("AtlasTexture_wpjs6")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faymu"]
+atlas = SubResource("CompressedTexture2D_eb2b0")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0sr73"]
+texture = SubResource("AtlasTexture_faymu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrck3"]
+texture = SubResource("AtlasTexture_faymu")
+
+[node name="ChallengeManager" type="HBoxContainer"]
+offset_right = 458.0
+offset_bottom = 148.0
+alignment = 1
+script = ExtResource("1_qdd51")
+
+[node name="PageManager" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="DecrementButton" type="Button" parent="PageManager"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_le7im")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4ph5x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_oqhyw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_oqhyw")
+script = ExtResource("2_lfw5k")
+
+[node name="PageLabel" type="Label" parent="PageManager"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_igxdy")
+theme_override_font_sizes/font_size = 24
+text = "1/1"
+horizontal_alignment = 1
+
+[node name="IncrementButton" type="Button" parent="PageManager"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/focus = SubResource("StyleBoxEmpty_le7im")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ygxvd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0sr73")
+theme_override_styles/normal = SubResource("StyleBoxTexture_xrck3")
+script = ExtResource("2_lfw5k")
+
+[node name="Challenges" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="Challenges"]
+custom_minimum_size = Vector2(400, 155)
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="ChallengeButton1" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton2" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton3" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton4" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton5" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton6" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton7" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton8" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton9" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
+
+[node name="ChallengeButton10" parent="Challenges/GridContainer" instance=ExtResource("4_lfw5k")]
+layout_mode = 2
