@@ -25,6 +25,9 @@ func _init() -> void:
 	ModLoaderMod.install_script_extension(
 		extensions_dir_path.path_join("scenes/ui/challenge_mode_score.gd")
 	)
+	ModLoaderMod.install_script_extension(
+		extensions_dir_path.path_join("autoload/saved_progress.gd")
+	)
 
 func _ready() -> void:
 	load(mod_dir_path.path_join("builtin.gd")).new()._ready()
