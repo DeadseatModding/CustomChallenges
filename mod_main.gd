@@ -42,6 +42,17 @@ func add_challenge(challenge: Object) -> void:
 	ModLoaderLog.info(log_string, ZACKERYRSMITH_CC_LOG_NAME)
 	challenges.merge({challenge.name: challenge})
 
+func _add_builtin_challenge(challenge: Object) -> void:
+	if challenge.get_script() != CustomChallenge:
+		return ModLoaderLog.warning(
+			"A challenge marked as builtin does not derive from CustomChallenge",
+			ZACKERYRSMITH_CC_LOG_NAME
+		)
+	var log_string = "Adding BUILTIN challenge:"
+	log_string += "\n\t%s | %s" % [challenge.name, challenge.description]
+	ModLoaderLog.debug(log_string, ZACKERYRSMITH_CC_LOG_NAME)
+	challenges.merge({challenge.name: challenge})
+
 func add_preset(preset: Object) -> void:
 	if preset.get_script() != CustomPreset:
 		return ModLoaderLog.warning(
@@ -49,6 +60,15 @@ func add_preset(preset: Object) -> void:
 			ZACKERYRSMITH_CC_LOG_NAME
 		)
 	ModLoaderLog.info("Adding preset %s" % [preset.name], ZACKERYRSMITH_CC_LOG_NAME)
+	presets.merge({preset.name: preset})
+
+func _add_builtin_preset(preset: Object) -> void:
+	if preset.get_script() != CustomPreset:
+		return ModLoaderLog.warning(
+			"A preset marked as builtin does not derive from CustomPreset",
+			ZACKERYRSMITH_CC_LOG_NAME
+		)
+	ModLoaderLog.debug("Adding BUILTIN preset %s" % [preset.name], ZACKERYRSMITH_CC_LOG_NAME)
 	presets.merge({preset.name: preset})
 
 ## Helper function to easily create an AtlasTexture

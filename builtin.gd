@@ -20,7 +20,7 @@ func _ready() -> void:
 			"challenge_steering_enabled",
 			state
 		)
-	CC.add_challenge(steering)
+	CC._add_builtin_challenge(steering)
 	
 	var monster_2d = CC.CustomChallenge.new()
 	monster_2d.name = "monster_2d"
@@ -32,7 +32,7 @@ func _ready() -> void:
 			"challenge_enable_monster_2d",
 			state
 		)
-	CC.add_challenge(monster_2d)
+	CC._add_builtin_challenge(monster_2d)
 	
 	var lose_gas = CC.CustomChallenge.new()
 	lose_gas.name = "lose_gas"
@@ -44,7 +44,7 @@ func _ready() -> void:
 			"challenge_lose_gas",
 			state
 		)
-	CC.add_challenge(lose_gas)
+	CC._add_builtin_challenge(lose_gas)
 	
 	var red_eyes = CC.CustomChallenge.new()
 	red_eyes.name = "red_eyes"
@@ -56,7 +56,7 @@ func _ready() -> void:
 			"challenge_red_eyes",
 			state
 		)
-	CC.add_challenge(red_eyes)
+	CC._add_builtin_challenge(red_eyes)
 	
 	var no_items = CC.CustomChallenge.new()
 	no_items.name = "no_items"
@@ -68,7 +68,7 @@ func _ready() -> void:
 			"challenge_no_items",
 			state
 		)
-	CC.add_challenge(no_items)
+	CC._add_builtin_challenge(no_items)
 	
 	var no_doors = CC.CustomChallenge.new()
 	no_doors.name = "no_doors"
@@ -80,7 +80,7 @@ func _ready() -> void:
 			"challenge_no_doors",
 			state
 		)
-	CC.add_challenge(no_doors)
+	CC._add_builtin_challenge(no_doors)
 	
 	var die_irl = CC.CustomChallenge.new()
 	die_irl.name = "die_irl"
@@ -92,7 +92,7 @@ func _ready() -> void:
 			"challenge_die_irl",
 			state
 		)
-	CC.add_challenge(die_irl)
+	CC._add_builtin_challenge(die_irl)
 	
 	var key_enabled = CC.CustomChallenge.new()
 	key_enabled.name = "key"
@@ -104,7 +104,7 @@ func _ready() -> void:
 			"challenge_key_enabled",
 			state
 		)
-	CC.add_challenge(key_enabled)
+	CC._add_builtin_challenge(key_enabled)
 	
 	var living_animals = CC.CustomChallenge.new()
 	living_animals.name = "living_animals"
@@ -116,7 +116,7 @@ func _ready() -> void:
 			"challenge_living_animals",
 			state
 		)
-	CC.add_challenge(living_animals)
+	CC._add_builtin_challenge(living_animals)
 	
 	var corruption = CC.CustomChallenge.new()
 	corruption.name = "corruption"
@@ -128,7 +128,7 @@ func _ready() -> void:
 			"challenge_monkeywrench",
 			state
 		)
-	CC.add_challenge(corruption)
+	CC._add_builtin_challenge(corruption)
 	#endregion
 	
 	#region Presets
@@ -150,7 +150,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 4
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 9
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 7
-	CC.add_preset(welcome_back)
+	CC._add_builtin_preset(welcome_back)
 	
 	var corrupted_data = CC.CustomPreset.new()
 	corrupted_data.name = "corrupted_data"
@@ -171,7 +171,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 3
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 5
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 6
-	CC.add_preset(corrupted_data)
+	CC._add_builtin_preset(corrupted_data)
 	
 	var gamer = CC.CustomPreset.new()
 	gamer.name = "gamer"
@@ -193,7 +193,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 2
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 1
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 5
-	CC.add_preset(gamer)
+	CC._add_builtin_preset(gamer)
 	
 	var harder_mode = CC.CustomPreset.new()
 	harder_mode.name = "harder_mode"
@@ -217,7 +217,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 2
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 9
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 5
-	CC.add_preset(harder_mode)
+	CC._add_builtin_preset(harder_mode)
 	
 	var fast_lane = CC.CustomPreset.new()
 	fast_lane.name = "fast_lane"
@@ -240,7 +240,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 4
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 7
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 8
-	CC.add_preset(fast_lane)
+	CC._add_builtin_preset(fast_lane)
 	
 	var sixth_sense = CC.CustomPreset.new()
 	sixth_sense.name = "sixth_sense"
@@ -264,7 +264,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 1
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 3
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 9
-	CC.add_preset(sixth_sense)
+	CC._add_builtin_preset(sixth_sense)
 	
 	var taste_of_hell = CC.CustomPreset.new()
 	taste_of_hell.name = "taste_of_hell"
@@ -290,7 +290,7 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 1
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 0
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 7
-	CC.add_preset(taste_of_hell)
+	CC._add_builtin_preset(taste_of_hell)
 	
 	var suffer = CC.CustomPreset.new()
 	suffer.name = "suffer"
@@ -316,29 +316,5 @@ func _ready() -> void:
 		Global.challenge_mode_settings.gamekyd_item_selected = 1
 		Global.challenge_mode_settings.gamekyd_chicken_selected = 0
 		Global.challenge_mode_settings.gamekyd_hunger_selected = 5
-	CC.add_preset(suffer)
-	
-	var test = CC.CustomPreset.new()
-	test.name = "test"
-	test.text = "TEST"
-	test.enabled_challenges = [
-		"steering",
-		"monster_2d",
-		"lose_gas",
-		"red_eyes",
-		"no_items",
-		"no_doors",
-		"die_irl",
-		"key",
-		"living_animals",
-		"corruption",
-	]
-	test.enabled_callback = func():
-		Global.challenge_mode_settings.monster_aggression_3d = 10
-		Global.challenge_mode_settings.monster_aggression_2d = 10
-		Global.challenge_mode_settings.gamekyd_drive_speed = 10
-		Global.challenge_mode_settings.gamekyd_item_selected = 1
-		Global.challenge_mode_settings.gamekyd_chicken_selected = 0
-		Global.challenge_mode_settings.gamekyd_hunger_selected = 5
-	CC.add_preset(test)
+	CC._add_builtin_preset(suffer)
 	#endregion
